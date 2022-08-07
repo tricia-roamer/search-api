@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package search;
+
+service Search {
+  rpc GetPopular(GetPopularRequest) returns (GetPopularResponse) {}
+}
+
+// GetPopular
+message GetPopularRequest {
+  int32 count = 1;
+  string startAt = 2;
+  string language = 3;
+}
+
+message GetPopularResponse {
+  string description = 1;
+  repeated Item items = 2;
+  Response response = 3;
+}
+
+// data structures
+message Item {
+  string createdAt = 1;
+  string language = 2;
+  string name = 3;
+  string url = 4;
+  string description = 5;
+
+}
+
+message Response {
+  int32 status = 1;
+  string message = 2;
+}

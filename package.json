@@ -1,0 +1,31 @@
+{
+  "name": "apotheke-code-challenge",
+  "version": "1.0.0",
+  "description": "A simple backend application to get popular github repositories",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --setupFiles dotenv/config",
+    "start": "node ./server.js",
+    "watch": "nodemon ./server.js -e js,yml,json,proto"
+  },
+  "author": "tricia-roamer",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.8",
+    "@grpc/proto-loader": "^0.7.0",
+    "@joi/date": "^2.1.0",
+    "@sentry/node": "^7.9.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "got": "^11.8.3",
+    "grpc-caller": "^0.14.0",
+    "joi": "^17.6.0",
+    "luxon": "^3.0.1",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
